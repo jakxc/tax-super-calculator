@@ -1,23 +1,32 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
+import { calculateTax, calculateSuper } from './utils';
 
 function App() {
+  const [input, setInput] = useState('');
+  const [tax, setTax] = useState(0);
+  const [superAnn, setSuperAnn] = useState(0);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    
+    setTax(calculateTax(input));
+    setSuperAnn(calculateSuper(input));
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <form onSubmit={handleSubmit}>
+        <input 
+          type='text' 
+          name='income'
+          value={input}
+          placeholder='Enter Income Here'
+          onChange={(e) => setInput(Number(e.target.value))}
+          />
+          <button>Submit</button>
+      </form>
+      <div>tax: {tax}, super: {superAnn}</div>
     </div>
   );
 }
