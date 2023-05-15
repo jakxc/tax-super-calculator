@@ -4,7 +4,7 @@ import { calculateTax, calculateSuper } from './utils'
 
 test('renders calculated tax of 20000', () => {
   render(<App />);
-  const input = screen.getByRole('input');
+  const input = screen.getByPlaceholderText('Enter Annual Income Here');
   const button = screen.getByRole('button');
 
   fireEvent.change(input, { target: { value: '20000' } });
@@ -17,7 +17,7 @@ test('renders calculated tax of 20000', () => {
 
 test('renders calculated superannuation of 20000', () => {
   render(<App />);
-  const input = screen.getByRole('input');
+  const input = screen.getByPlaceholderText('Enter Annual Income Here');
   const button = screen.getByRole('button');
 
   fireEvent.change(input, { target: { value: '20000' } });

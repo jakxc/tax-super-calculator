@@ -6,7 +6,6 @@ const IncomeForm = ({ input, setInput, handleSubmit }) => {
             <div className='input-container'>
                 <span className="currency-code">$</span>
                 <input 
-                    role='input'
                     type='number' 
                     name='income'
                     value={input}
@@ -14,7 +13,7 @@ const IncomeForm = ({ input, setInput, handleSubmit }) => {
                     onChange={(e) => setInput(e.target.value)}
                 />
             </div>
-            <button role='button'>Calculate</button>
+            <button>Calculate</button>
         </form>
     )
 }

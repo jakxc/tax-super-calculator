@@ -1,4 +1,4 @@
-import { calculateTax, calculateSuper } from '../utils'
+import { calculateTax, calculateSuper } from './utils'
 
 /*
 * Test to check whether calcuateTax method is executed properly with the values provided
