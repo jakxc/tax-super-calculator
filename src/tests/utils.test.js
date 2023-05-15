@@ -1,28 +1,73 @@
 import { calculateTax, calculateSuper } from '../utils'
 
 /*
-* test to check whether Utils methods are executed properly with the values provided
+* Test to check whether calcuateTax method is executed properly with the values provided
 *
 */
-describe('check the operation of 2 numbers', () => {
-  it('sum of 2 and 4 must result in 6', () => {
-      let sum = Util.add(2,4);
-      expect(sum).toBeDefined()
-      expect(sum).toEqual(6)
-  })
-  it('difference of 5 and 3 must result in 2', () => {
-      let diff = Util.sub(5,3);
-      expect(diff).toBeDefined()
-      expect(diff).toEqual(2)
-  })
-  it('product of 6 and 8 must result in 48', () => {
-      let prod = Util.mul(6,8);
-      expect(prod).toBeDefined()
-      expect(prod).toEqual(48)
-  })
-  it('result of division of 64 by 4 must result in 16', () => {
-      let div = Util.div(64,4);
-      expect(div).toBeDefined()
-      expect(div).toEqual(16)
-  })
+describe('check the annual tax of different income values', () => {
+    test('tax for 18000 must be 0', () => {
+        let tax = calculateTax(18000);
+        expect(tax).toBeDefined()
+        expect(tax).toEqual(0)
+    })
+
+    test('tax for 20000 must be 342', () => {
+        let tax = calculateTax(20000);
+        expect(tax).toBeDefined()
+        expect(tax).toEqual(342)
+    })
+
+    test('tax for 50000 must be 7797', () => {
+        let tax = calculateTax(50000);
+        expect(tax).toBeDefined()
+        expect(tax).toEqual(7797)
+    })
+
+    test('tax for 120000 must be 31897', () => {
+        let tax = calculateTax(120000);
+        expect(tax).toBeDefined()
+        expect(tax).toEqual(31897)
+    })
+
+    test('tax for 250000 must be 85597', () => {
+        let tax = calculateTax(250000);
+        expect(tax).toBeDefined()
+        expect(tax).toEqual(85597)
+    })
+})
+
+/*
+* Test to check whether calcuateSuper method is executed properly with the values provided
+*
+*/
+describe('check the annual superannuation of different income values', () => {
+    test('superannuation for 18000 must be 1890', () => {
+        let superannuation = calculateSuper(18000);
+        expect(superannuation).toBeDefined()
+        expect(superannuation).toEqual(1890)
+    })
+
+    test('superannuation for 20000 must be 2100', () => {
+        let superannuation = calculateSuper(20000);
+        expect(superannuation).toBeDefined()
+        expect(superannuation).toEqual(2100)
+    })
+
+    test('superannuation for 50000 must be 5250', () => {
+        let superannuation = calculateSuper(50000);
+        expect(superannuation).toBeDefined()
+        expect(superannuation).toEqual(5250)
+    })
+
+    test('superannuation for 120000 must be 12600 ', () => {
+        let superannuation = calculateSuper(120000);
+        expect(superannuation).toBeDefined()
+        expect(superannuation).toEqual(12600)
+    })
+
+    test('superannuation of 250000 must be 26250', () => {
+        let superannuation = calculateSuper(250000);
+        expect(superannuation).toBeDefined()
+        expect(superannuation).toEqual(26250)
+    })
 })

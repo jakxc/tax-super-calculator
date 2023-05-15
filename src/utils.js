@@ -11,21 +11,21 @@ const calculateTax = (income) => {
 
     if (income <= 18200) {
       annualTax = 0;
-    } else if (income <= 3700) {
+    } else if (income <= 37000) {
       annualTax = ((income - 18200) * TAX_19_PERCENT).toFixed(2);
     } else if (income <= 90000) {
       annualTax = (3572 + (income - 37000) * TAX_32_PERCENT).toFixed(2);
     } else if (income <= 180000) {
       annualTax = (20797 + (income - 90000) * TAX_37_PERCENT).toFixed(2);
     } else if (income > 180000) {
-      annualTax = (54097 + (income - 18000) * TAX_45_PERCENT).toFixed(2);
+      annualTax = (54097 + (income - 180000) * TAX_45_PERCENT).toFixed(2);
     }
 
-    return annualTax;
+    return Number(annualTax);
 };
 
 const calculateSuper = (income) => {
-  return (income * SUPER_PERCENT).toFixed(2);
+  return Number((income * SUPER_PERCENT).toFixed(2));
 }
 
 export { calculateTax, calculateSuper };
