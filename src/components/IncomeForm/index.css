@@ -1,10 +1,16 @@
-.input-container {
-    position:relative;
+  .income-container {
+    width: 50vw;
+    position: relative;
+  }
+
+  .input-income {
+    width: 100%;
+    padding: 20px 20px 20px 30px;
   }
   
   .currency-code {
     position:absolute;
-    left: 20px;
+    left: 10px;
     top: 32%;
     color: black
   }

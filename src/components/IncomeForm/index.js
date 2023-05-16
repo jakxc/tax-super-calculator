@@ -3,9 +3,10 @@ import './index.css';
 const IncomeForm = ({ input, setInput, handleSubmit }) => {
     return ( 
         <form className='form-container' onSubmit={handleSubmit}>
-            <div className='input-container'>
+            <div className='income-container'>
                 <span className="currency-code">$</span>
                 <input 
+                    className='input-income'
                     type='number' 
                     name='income'
                     value={input}

@@ -4,11 +4,16 @@ import { calculateTax, calculateSuper } from './utils';
 import IncomeForm from './components/IncomeForm';
 import Results from './components/Results';
 import Footer from './components/Footer';
+import { Link } from 'react-router-dom';
 
 function App() {
   const [input, setInput] = useState('');
   const [annualTax, setAnnualTax] = useState(0);
   const [annualSuper, setAnnualSuper] = useState(0);
+
+  const styles = {
+    color: 'white'
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -21,6 +26,7 @@ function App() {
     <div className="App">
       <header>
         <h1>Tax and Superannuation Calculator</h1>
+        <Link to='/' style={styles}>Go to Onboarding Form</Link>
       </header>
       <IncomeForm 
         input={input}
