@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
 import OnboardingForm from './components/OnboardingForm';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -13,8 +12,7 @@ root.render(
       <Routes>
         <Route path='/' element={<OnboardingForm />} />
         <Route path='/app' element={<App />} />
-      </Routes>
-      
+      </Routes>    
     </Router>
   </React.StrictMode>
 );
