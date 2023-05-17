@@ -12,7 +12,7 @@ function App() {
   const [annualSuper, setAnnualSuper] = useState(0);
 
   const styles = {
-    color: 'white'
+    color: 'rgb(133, 174, 244)'
   };
 
   const handleSubmit = (e) => {
@@ -26,7 +26,7 @@ function App() {
     <div className="App">
       <header>
         <h1>Tax and Superannuation Calculator</h1>
-        <Link to='/' style={styles}>Go to Onboarding Form</Link>
+        <Link to='/' style={styles}>Go to Onboarding Form Design</Link>
       </header>
       <IncomeForm 
         input={input}

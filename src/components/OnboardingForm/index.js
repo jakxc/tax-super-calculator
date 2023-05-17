@@ -25,7 +25,7 @@ const OnboardingForm = () => {
     });
 
     const styles = {
-        color: 'white'
+        color: 'rgb(133, 174, 244)'
     };
     
     const handleChange = (e) => {
@@ -42,7 +42,7 @@ const OnboardingForm = () => {
     return (
         <>
             <header>
-                <h1>Employee Onboarding Form</h1>
+                <h1>Onboarding Form Design</h1>
                 <Link to='/app' style={styles}>Go to Tax and Superannuation Calculator</Link>
             </header>
             <form className='form-container'>
